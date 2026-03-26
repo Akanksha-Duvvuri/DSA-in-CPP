@@ -2,7 +2,7 @@
 
 Track of my horrible inconsistent progress in DSA ✨
 
-Time to grind </3
 fire emoji times 8
 
-1. 23/03 
+1. 23/03 - finished 2d arrays
+2. 26/03
