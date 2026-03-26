@@ -13,12 +13,12 @@ int main(){
     int n = sizeof(arr) / sizeof(int);
 
     //sort(arr+2, arr+5);
-    sort(arr, arr+n);
+    sort(arr, arr+n);  
     printArr(arr, n);
 
     cout << "\n";
     
-    sort(arr, arr+n, greater<int>());
+    sort(arr, arr+n, greater<int>());  //inbuilt algo
     printArr(arr, n);
 
     cout << endl;

@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//Adding in the front
 class Node{
 public:
     int data;

@@ -14,8 +14,8 @@ void insertion(int *arr, int n){
         int prev = i-1;
 
         while(prev >=0 && arr[prev] > curr){
-            swap(arr[prev], arr[prev+1]);
-            prev--;
+            swap(arr[prev], arr[prev+1]);    
+            prev--; //going backwards
         }
 
         arr[prev+1] = curr;

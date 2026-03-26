@@ -17,7 +17,7 @@ int main(){
 
     int *ptr = 0;
 
-    cout << ptr << endl;
+    cout << ptr << "\n";
 
     cout << a << endl;
     cout << b << endl;

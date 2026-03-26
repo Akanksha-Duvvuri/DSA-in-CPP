@@ -7,7 +7,7 @@ void print(int *arr, int n){
         cout << arr[i] << " ";
     }
 }
-
+//pivot and sort
 int partition(int *arr, int start, int end){
     int idx = start - 1, pivot = arr[end];
 

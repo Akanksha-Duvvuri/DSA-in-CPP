@@ -13,7 +13,7 @@ void bubble(int *arr, int n){
         }
     }
 
-    if(!isSwap){
+    if(!isSwap){   //optimised
         return;
     }
 

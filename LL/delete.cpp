@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//removing a node from the LL
 class Node{
 public:
     int data;

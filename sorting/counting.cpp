@@ -9,7 +9,7 @@ void printArr(int *arr, int n){
 }
 
 void countSort(int *arr, int n){
-    int freq[100000]; //range initially
+    int freq[100000]; //range initially - given in the question
 
     int minVal = INT_MAX, maxVal = INT_MIN;
 

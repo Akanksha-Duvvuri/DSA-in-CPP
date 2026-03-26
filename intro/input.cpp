@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//syntax
 int main(){
     int a;
     int b;

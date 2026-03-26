@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//Basic struc of LL
 class Node{
     int data;
     Node* next;

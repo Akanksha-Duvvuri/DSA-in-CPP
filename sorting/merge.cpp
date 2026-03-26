@@ -6,7 +6,7 @@ void print(int *arr, int n){
         cout << arr[i] << " ";
     }
 }
-
+//TC = nlogn - very very good TC
 void merge(int *arr, int start, int mid, int end){
     int size = end - start + 1;
     int tempArr[size];

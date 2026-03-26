@@ -22,7 +22,7 @@ int main(){
     // cout << ptr << endl;
 
     //pass by value - direct or copy sent 
-    //pass by reference - changes thru address
+    //pass by reference - changes through address
 
     change(a); // a copy is sent 
     cout << a << endl;

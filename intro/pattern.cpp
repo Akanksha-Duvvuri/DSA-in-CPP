@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//triangle pattern
 int main () {
     int n = 4;
 

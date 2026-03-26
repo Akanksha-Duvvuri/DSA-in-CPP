@@ -7,7 +7,7 @@ void print(int *arr, int n){
         cout << arr[i] << " ";
     }
 }
-
+//keep the first element fixed and compare with the rest
 void selection(int *arr, int n){
     for(int i=0; i<n-1; i++){
         int min = i;

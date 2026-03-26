@@ -6,7 +6,7 @@ void print(char *arr, int n){
         cout << arr[i] << " ";
     }
 }
-
+ //works for any array
 void insertion(char *arr, int n){
     for(int i=1; i<n; i++){
         int curr = arr[i];
@@ -14,7 +14,7 @@ void insertion(char *arr, int n){
 
         while(prev >=0 && arr[prev] < curr){
             swap(arr[prev], arr[prev+1]);
-            prev--;
+            prev--;  
         }
 
         arr[prev+1] = curr;
@@ -25,8 +25,7 @@ void insertion(char *arr, int n){
 
 int main(){
     char ch[6] = {'f', 'b', 'a', 'e', 'c', 'd'};
-    int n = sizeof(ch) / sizeof(char);
-
+    int n = sizeof(ch) / sizeof(char);  
     insertion(ch, 6);
     return 0;
 }

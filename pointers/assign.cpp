@@ -16,7 +16,7 @@ int main(){
     char &cho = ch;
 
     cho += a;
-    *ptr += ch;
+    *ptr += ch;  //char ptr
 
     cout << a << ", " << ch << endl;
     return 0;
