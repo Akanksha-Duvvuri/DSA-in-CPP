@@ -5,6 +5,7 @@ using namespace std;
 class Student {  //also used to club properties and methods together
     string name;
     float cgpa;
+    int grade;
 
 public:
     //methods 
