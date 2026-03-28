@@ -51,6 +51,6 @@ int main(){
     Car c1("Porsche 911", "black");
 
     cout << "car name: " << c1.getName() << endl;
-     cout << "car color: " << c1.getColor() << endl;
+    cout << "car color: " << c1.getColor() << endl;
     return 0;
 }
