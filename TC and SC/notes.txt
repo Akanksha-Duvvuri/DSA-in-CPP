@@ -1,0 +1,39 @@
+TIME AND SPACE COMPLEXITY- (2 parameters which determine the efficieny of our code)
+
+- helps decide which solution is better and to build logic
+
+
+- Used for Big numbers - when the input size is very big. 
+
+- If the algo takes lesser time i.e. lesser TC - it is a more efficient algorithm. Same with SC- lesser space - better algorithm. 
+
+- Order complexity analysis - nothing but calculating the TC and SC of our code. 
+
+
+-------TC--------
+- TC is NOT the actual time taken.
+it is the amount of time taken up by an algorithm as a function of the input size (n)
+
+or it is a relation between the time taken and the size of the input
+
+basically, as the input size n is increasing or decreasing, based on that time changes - this relation is TC
+
+You can measure this time taken in terms of operations (cout , a+b, etc etc)
+
+as n increases, operations increase and therefore the TC will also increase. 
+
+
+-------Big O notation------
+- its basically the upper bound - or the worst case time complexity. It cant get worse than this. 
+
+- Always try to find the worst case complexity
+
+- ways to get TC  a) graph
+                  b) from some function (check book for examples)
+
+- big omega - LOWER BOUND (best TC)
+
+- Big theta - average TC
+
+------- Space complexity --------
+- Amount of extra space occipied by an algorithm as a function of input size (n)
