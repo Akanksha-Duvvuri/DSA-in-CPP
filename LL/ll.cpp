@@ -1,29 +1,30 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-//Basic struc of LL
-class Node{
+
+class Node {
     int data;
     Node* next;
 
 public: 
-    Node(int val){
+    Node(int val) { //constructor
         data = val;
         next = NULL;
     }
 };
 
-class List{
+class List {
     Node* head;
     Node* tail;
 
-public:
-    List(){
+public: 
+    List() {
         head = NULL;
         tail = NULL;
     }
-}
+};
 
-int main(){
+int main() {
     List ll();
     return 0;
 }
