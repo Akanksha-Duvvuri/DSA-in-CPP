@@ -37,3 +37,5 @@ as n increases, operations increase and therefore the TC will also increase.
 
 ------- Space complexity --------
 - Amount of extra space occipied by an algorithm as a function of input size (n)
+
+- 2^n < n^2 < n < logn < constant (usually - better TC check graph for better understanding. )
