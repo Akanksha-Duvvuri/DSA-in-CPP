@@ -14,7 +14,7 @@ public:
     }
 
     ~Node() {
-        cout << "-Node";
+        // cout << "-Node";
         if(next != NULL) {
             delete next;
             next = NULL;
@@ -34,7 +34,7 @@ public:
 
 
     ~List() {
-        cout << "-list";
+        // cout << "-list";
         if(head != NULL) {
             delete head;
             head = NULL;
@@ -74,33 +74,59 @@ public:
         cout << "NULL" << endl;
     }
 
-    void insert(int val, int pos) {
-        Node* newNode = new Node(val);
-
+    int searchitr(int key) {
         Node* temp = head;
+        int idx = 0;
 
-        for(int i=0; i<pos-1; i++) {
-            if(temp == NULL) {
-                cout << "position is invalid";
-                return;
+        while(temp != NULL) {
+            if(temp->data == key) {
+               return idx;
             }
+
             temp = temp->next;
+            idx++;
         }
 
-        newNode->next = temp->next;
-        temp->next = newNode;
-    }   
+        return -1;
+    }
+
+    int helper(Node* temp, int key) {
+        if(temp == NULL) {
+            return -1;
+        }
+
+        if(temp->data == key) {
+            return 0;
+        }
+
+        int idx = helper(temp->next, key);
+
+        if(idx == -1) {
+            return -1;
+        }
+
+        return idx + 1; //check video for explanation
+
+    }
+
+    int searchRec(int key) {
+        return helper(head, key);
+    }
+
 };
 
 int main() {
     List ll;
 
+    ll.push_front(5);
+    ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
 
-// 3->2->1
-
     ll.print();
+
+    cout << ll.searchitr(2) << endl;
+    cout << ll.searchRec(2) << endl;
     return 0;
 }

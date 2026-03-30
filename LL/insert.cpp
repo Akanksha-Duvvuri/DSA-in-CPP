@@ -12,14 +12,6 @@ public:
         data = val;
         next = NULL;
     }
-
-    ~Node() {
-        cout << "-Node";
-        if(next != NULL) {
-            delete next;
-            next = NULL;
-        }
-    }
 };
 
 class List {
@@ -32,15 +24,6 @@ public:
         tail = NULL;
     }
 
-
-    ~List() {
-        cout << "-list";
-        if(head != NULL) {
-            delete head;
-            head = NULL;
-        }
-    }
-
     void push_front(int val) {
         Node* newNode = new Node(val); //dynamic allocation - new node with int val = val
 
@@ -49,17 +32,6 @@ public:
         } else {
             newNode->next = head;  
             head = newNode;
-        }
-    }
-
-    void push_back(int val) {
-        Node* newNode = new Node(val); //dynamic allocation - new node with int val = val
-
-        if(head == NULL) {
-            head = tail = newNode;
-        } else {
-            tail->next = newNode;  
-            tail = newNode;
         }
     }
 
@@ -102,5 +74,16 @@ int main() {
 // 3->2->1
 
     ll.print();
+
+    ll.push_front(4);
+    ll.push_front(5);
+
+    ll.print();
+
+    ll.insert(100, 2);
+
+    ll.print();
+
+
     return 0;
 }

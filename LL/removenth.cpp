@@ -14,7 +14,7 @@ public:
     }
 
     ~Node() {
-        cout << "-Node";
+        // cout << "-Node";
         if(next != NULL) {
             delete next;
             next = NULL;
@@ -34,7 +34,7 @@ public:
 
 
     ~List() {
-        cout << "-list";
+        // cout << "-list";
         if(head != NULL) {
             delete head;
             head = NULL;
@@ -73,34 +73,42 @@ public:
 
         cout << "NULL" << endl;
     }
-
-    void insert(int val, int pos) {
-        Node* newNode = new Node(val);
-
+    
+    int getsize() {
+        int size = 0;
         Node* temp = head;
 
-        for(int i=0; i<pos-1; i++) {
-            if(temp == NULL) {
-                cout << "position is invalid";
-                return;
-            }
+        while(temp != NULL) {
             temp = temp->next;
+            size++;
+        }
+        return size;
+    }
+
+    void removenth(int n) {
+        int size = getsize();
+        Node* prev = head;
+
+        for(int i=1; i<(size-n); i++) { //stops at the node before the one which is gonna get deleted
+            prev = prev->next;
         }
 
-        newNode->next = temp->next;
-        temp->next = newNode;
-    }   
+        prev->next = prev->next->next; 
+    } 
 };
 
 int main() {
     List ll;
 
+    ll.push_front(5);
+    ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
 
-// 3->2->1
+    ll.print();
 
+    ll.removenth(2);
     ll.print();
     return 0;
 }

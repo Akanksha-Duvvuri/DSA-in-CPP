@@ -7,7 +7,7 @@ public:
 
     int data;
     Node* next;
-    
+
     Node(int val) { //constructor
         data = val;
         next = NULL;
@@ -24,14 +24,14 @@ public:
         tail = NULL;
     }
 
-    void push_front(int val) {
+    void push_back(int val) {
         Node* newNode = new Node(val); //dynamic allocation - new node with int val = val
 
         if(head == NULL) {
             head = tail = newNode;
         } else {
-            newNode->next = head;  
-            head = newNode;
+            tail->next = newNode;  
+            tail = newNode;
         }
     }
 
@@ -42,25 +42,19 @@ public:
             cout << temp->data << " -> ";
             temp = temp->next;  
         }
-
-        cout << "NULL" << endl;
+         cout << "NULL" << endl;
     }
 };
 
 int main() {
     List ll;
 
-    ll.push_front(3);
-    ll.push_front(2);
-    ll.push_front(1);
+    ll.push_back(3);
+    ll.push_back(2);
+    ll.push_back(1);
 
 // 3->2->1
 
     ll.print();
-
-    ll.push_front(4);
-    ll.push_front(5);
-
-      ll.print();
     return 0;
 }

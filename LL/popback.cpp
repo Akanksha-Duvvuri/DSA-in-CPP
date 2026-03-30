@@ -14,7 +14,7 @@ public:
     }
 
     ~Node() {
-        cout << "-Node";
+        // cout << "-Node";
         if(next != NULL) {
             delete next;
             next = NULL;
@@ -34,7 +34,7 @@ public:
 
 
     ~List() {
-        cout << "-list";
+        // cout << "-list";
         if(head != NULL) {
             delete head;
             head = NULL;
@@ -90,17 +90,34 @@ public:
         newNode->next = temp->next;
         temp->next = newNode;
     }   
+
+     void pop_back() {
+       Node* temp = head;
+
+       while(temp->next->next != NULL) { //can also write temp->next != tail
+        temp = temp->next;
+       }
+
+       temp->next = NULL;
+       delete tail;
+       tail = temp;
+    }
 };
 
 int main() {
     List ll;
 
+    ll.push_front(5);
+    ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
 
 // 3->2->1
 
+    ll.print();
+
+    ll.pop_back();
     ll.print();
     return 0;
 }

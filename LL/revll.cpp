@@ -14,7 +14,7 @@ public:
     }
 
     ~Node() {
-        cout << "-Node";
+        // cout << "-Node";
         if(next != NULL) {
             delete next;
             next = NULL;
@@ -34,7 +34,7 @@ public:
 
 
     ~List() {
-        cout << "-list";
+        // cout << "-list";
         if(head != NULL) {
             delete head;
             head = NULL;
@@ -52,17 +52,6 @@ public:
         }
     }
 
-    void push_back(int val) {
-        Node* newNode = new Node(val); //dynamic allocation - new node with int val = val
-
-        if(head == NULL) {
-            head = tail = newNode;
-        } else {
-            tail->next = newNode;  
-            tail = newNode;
-        }
-    }
-
     void print() {
         Node* temp = head;
 
@@ -74,32 +63,35 @@ public:
         cout << "NULL" << endl;
     }
 
-    void insert(int val, int pos) {
-        Node* newNode = new Node(val);
+    void reverse() {
+        Node* curr = head;
+        Node* prev = NULL;
 
-        Node* temp = head;
+        while(curr != NULL) {
+            Node* next = curr->next;
+            curr->next = prev;
 
-        for(int i=0; i<pos-1; i++) {
-            if(temp == NULL) {
-                cout << "position is invalid";
-                return;
-            }
-            temp = temp->next;
+            //update for next itr
+            prev = curr;
+            curr = next;
         }
 
-        newNode->next = temp->next;
-        temp->next = newNode;
-    }   
+        head = prev;
+    }
 };
 
 int main() {
     List ll;
 
+    ll.push_front(5);
+    ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
 
-// 3->2->1
+    ll.print();
+
+    ll.reverse();
 
     ll.print();
     return 0;
