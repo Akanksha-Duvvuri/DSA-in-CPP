@@ -8,4 +8,5 @@ fire emoji times 8
 2. 26/03 - char arrays - strings
 3. 28/03 - vectors, Bit manipulation, OOPS
 4. 29/03 - Recusion, Divide and Conquer, TC and SC
-5. 30/03 -  LL, stacks, queues
+5. 30/03 - linear LL and cycle LL intro
+6. 04/04 - cycle LL, stacks, queues, hashing 
