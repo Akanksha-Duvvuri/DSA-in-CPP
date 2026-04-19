@@ -11,3 +11,4 @@ fire emoji times 8
 5. 30/03 - linear LL and cycle LL intro
 6. 04/04 - cycle LL, stacks introduction
 7. 05/04 - stacks
+8. 19/04 - queue, greedy algorithms, BT, BST, heaps, hashing
