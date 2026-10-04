@@ -1,6 +1,6 @@
 # DSA-C++ 
 
-Track of my horrible inconsistent progress in DSA ✨
+Track of my horrible inconsistent progress in DSA 
 
 fire emoji times 8
 
@@ -11,4 +11,6 @@ fire emoji times 8
 5. 30/03 - linear LL and cycle LL intro
 6. 04/04 - cycle LL, stacks introduction
 7. 05/04 - stacks
-8. 19/04 - queue, greedy algorithms, BT, BST, heaps, hashing
+8. 19/04 - queue
+
+9.04 /10 - Greedy algorithms
