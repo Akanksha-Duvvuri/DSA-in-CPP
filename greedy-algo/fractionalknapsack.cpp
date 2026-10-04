@@ -2,7 +2,15 @@
 #include<vector>
 using namespace std;
 
-int fractional()
+int fractional(vector<int> val, vector<int> wt, int w){
+    int n = val.size();
+
+    vector<pair<double, int>> ratio[n, make_pair(0.0, 0)]; //along with the ratio - store index asw
+
+    for(int i=0; i<n; i++){
+        double r = val[i]/(double)wt[i];
+    }
+}
 
 
 int main() {
